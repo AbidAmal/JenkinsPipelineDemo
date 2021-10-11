@@ -29,6 +29,9 @@ pipeline {
         }
 
     }
+}
+node {
+
               timeout(unit: 'SECONDS', time: 5) {
         stage("One"){
             sleep 0
