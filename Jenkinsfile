@@ -27,10 +27,11 @@ pipeline {
                 echo 'Releasing'
             }
         }
-          timeout(unit: 'SECONDS', time: 5) {
+
+    }
+              timeout(unit: 'SECONDS', time: 5) {
         stage("One"){
             sleep 0
             echo 'hello'
         }
-    }
 }
