@@ -4,7 +4,7 @@ pipeline {
     timeout(unit: 'SECONDS', time: 5) 
 }
     stages {
-        stage('Hello') {0
+        stage('Hello') {
             steps {
                 sleep 1
                 echo 'Hello World'
