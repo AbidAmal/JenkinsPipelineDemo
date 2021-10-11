@@ -1,6 +1,8 @@
-node {
+pipeline {
     agent any
-
+   options{
+    timeout(unit: 'SECONDS', time: 5) 
+}
     stages {
         stage('Hello') {
             steps {
@@ -23,14 +25,14 @@ node {
             }
         }
         
-              timeout(unit: 'SECONDS', time: 5) {
+
         stage('Release') {
             steps {
-                 sleep 0
+             
                 echo 'Releasing'
             }
         }
-              }
+     
     
 }
 
