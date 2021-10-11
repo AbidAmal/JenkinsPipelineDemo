@@ -2,10 +2,11 @@ pipeline {
     agent any
    options{
     timeout(unit: 'SECONDS', time: 5) 
-}
+
     stages {
         stage('Hello') {
             steps {
+                sleep 1
                 echo 'Hello World'
             }
         } 
@@ -32,8 +33,8 @@ pipeline {
                 echo 'Releasing'
             }
         }
-     
+        }
     
 }
-
+ 
 }
